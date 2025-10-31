@@ -79,23 +79,41 @@ const Home = () => {
           </div>
 
           {/* Feature Cards */}
-          <div className="grid md:grid-cols-3 gap-6 mt-20">
-            <div className="bg-card p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 border border-border">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-20">
+            <div className="bg-card p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 border border-border cursor-pointer" onClick={() => navigate("/bmi")}>
               <div className="text-4xl mb-4">📊</div>
               <h3 className="text-xl font-semibold mb-2 text-foreground">BMI Calculator</h3>
               <p className="text-muted-foreground">Track your health with instant BMI analysis</p>
             </div>
 
-            <div className="bg-card p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 border border-border">
+            <div className="bg-card p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 border border-border cursor-pointer" onClick={() => navigate("/quiz")}>
               <div className="text-4xl mb-4">🎮</div>
               <h3 className="text-xl font-semibold mb-2 text-foreground">Fun Quizzes</h3>
               <p className="text-muted-foreground">Test your nutrition knowledge</p>
             </div>
 
-            <div className="bg-card p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 border border-border">
+            <div className="bg-card p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 border border-border cursor-pointer" onClick={() => navigate("/diet")}>
               <div className="text-4xl mb-4">🥗</div>
               <h3 className="text-xl font-semibold mb-2 text-foreground">Diet Guide</h3>
               <p className="text-muted-foreground">Learn about balanced nutrition</p>
+            </div>
+
+            <div className="bg-card p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 border border-border cursor-pointer" onClick={() => navigate("/food-adulteration")}>
+              <div className="text-4xl mb-4">🔬</div>
+              <h3 className="text-xl font-semibold mb-2 text-foreground">Food Safety</h3>
+              <p className="text-muted-foreground">Detect adulteration in common foods</p>
+            </div>
+
+            <div className="bg-card p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 border border-border cursor-pointer" onClick={() => navigate("/lifestyle-diseases")}>
+              <div className="text-4xl mb-4">🏥</div>
+              <h3 className="text-xl font-semibold mb-2 text-foreground">Health Awareness</h3>
+              <p className="text-muted-foreground">Learn about lifestyle diseases</p>
+            </div>
+
+            <div className="bg-card p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 border border-border cursor-pointer" onClick={() => navigate("/mentor")}>
+              <div className="text-4xl mb-4">🎯</div>
+              <h3 className="text-xl font-semibold mb-2 text-foreground">Personal Mentor</h3>
+              <p className="text-muted-foreground">Get your personalized health plan</p>
             </div>
           </div>
         </div>

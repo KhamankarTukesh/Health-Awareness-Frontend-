@@ -9,9 +9,12 @@ const Navigation = () => {
 
   const navItems = [
     { name: "Home", path: "/" },
-    { name: "BMI Calculator", path: "/bmi" },
+    { name: "BMI", path: "/bmi" },
     { name: "Quiz", path: "/quiz" },
-    { name: "Balanced Diet", path: "/diet" },
+    { name: "Diet Guide", path: "/diet" },
+    { name: "Food Safety", path: "/food-adulteration" },
+    { name: "Diseases", path: "/lifestyle-diseases" },
+    { name: "Mentor", path: "/mentor" },
     { name: "About", path: "/about" },
   ];
 

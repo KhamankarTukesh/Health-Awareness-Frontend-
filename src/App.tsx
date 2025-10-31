@@ -8,6 +8,9 @@ import Home from "./pages/Home";
 import BMI from "./pages/BMI";
 import Quiz from "./pages/Quiz";
 import Diet from "./pages/Diet";
+import FoodAdulteration from "./pages/FoodAdulteration";
+import LifestyleDiseases from "./pages/LifestyleDiseases";
+import Mentor from "./pages/Mentor";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 
@@ -25,6 +28,9 @@ const App = () => (
           <Route path="/bmi" element={<BMI />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/diet" element={<Diet />} />
+          <Route path="/food-adulteration" element={<FoodAdulteration />} />
+          <Route path="/lifestyle-diseases" element={<LifestyleDiseases />} />
+          <Route path="/mentor" element={<Mentor />} />
           <Route path="/about" element={<About />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

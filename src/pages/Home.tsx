@@ -115,6 +115,24 @@ const Home = () => {
               <h3 className="text-xl font-semibold mb-2 text-foreground">Personal Mentor</h3>
               <p className="text-muted-foreground">Get your personalized health plan</p>
             </div>
+
+            <div className="bg-card p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 border border-border cursor-pointer" onClick={() => navigate("/community")}>
+              <div className="text-4xl mb-4">👥</div>
+              <h3 className="text-xl font-semibold mb-2 text-foreground">Community Hub</h3>
+              <p className="text-muted-foreground">Connect with health enthusiasts</p>
+            </div>
+
+            <div className="bg-card p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 border border-border cursor-pointer" onClick={() => navigate("/videos")}>
+              <div className="text-4xl mb-4">🎥</div>
+              <h3 className="text-xl font-semibold mb-2 text-foreground">Video Library</h3>
+              <p className="text-muted-foreground">Watch educational health videos</p>
+            </div>
+
+            <div className="bg-card p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 border border-border cursor-pointer" onClick={() => navigate("/feedback")}>
+              <div className="text-4xl mb-4">⭐</div>
+              <h3 className="text-xl font-semibold mb-2 text-foreground">Your Feedback</h3>
+              <p className="text-muted-foreground">Help us improve the platform</p>
+            </div>
           </div>
         </div>
       </div>

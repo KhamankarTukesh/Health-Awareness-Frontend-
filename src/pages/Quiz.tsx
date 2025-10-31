@@ -146,6 +146,18 @@ const Quiz = () => {
       setSelectedAnswer(null);
       setTimeLeft(30);
     } else {
+      // Save to leaderboard
+      const leaderboard = JSON.parse(localStorage.getItem('quizLeaderboard') || '[]');
+      const newEntry = {
+        name: "Guest User",
+        score: score,
+        date: new Date().toLocaleDateString()
+      };
+      leaderboard.push(newEntry);
+      leaderboard.sort((a: any, b: any) => b.score - a.score);
+      const topScores = leaderboard.slice(0, 10);
+      localStorage.setItem('quizLeaderboard', JSON.stringify(topScores));
+      
       setShowResult(true);
       setQuizStarted(false);
     }

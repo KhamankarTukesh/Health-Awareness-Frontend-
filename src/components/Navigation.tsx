@@ -1,11 +1,13 @@
 import { Link, useLocation } from "react-router-dom";
-import { Apple, Menu, X } from "lucide-react";
+import { Apple, Menu, X, Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { useTheme } from "@/contexts/ThemeContext";
 
 const Navigation = () => {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { isDark, toggleTheme } = useTheme();
 
   const navItems = [
     { name: "Home", path: "/" },
@@ -15,6 +17,9 @@ const Navigation = () => {
     { name: "Food Safety", path: "/food-adulteration" },
     { name: "Diseases", path: "/lifestyle-diseases" },
     { name: "Mentor", path: "/mentor" },
+    { name: "Community", path: "/community" },
+    { name: "Videos", path: "/videos" },
+    { name: "Feedback", path: "/feedback" },
     { name: "About", path: "/about" },
   ];
 
@@ -50,17 +55,24 @@ const Navigation = () => {
                 </Button>
               </Link>
             ))}
+            <Button variant="ghost" size="icon" onClick={toggleTheme}>
+              {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </Button>
+          <div className="flex items-center gap-2 md:hidden">
+            <Button variant="ghost" size="icon" onClick={toggleTheme}>
+              {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+            </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </Button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}

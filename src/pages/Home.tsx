@@ -80,6 +80,12 @@ const Home = () => {
 
           {/* Feature Cards */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-20">
+            <div className="bg-card p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 border border-border cursor-pointer" onClick={() => navigate("/seasonal")}>
+              <div className="text-4xl mb-4">🌤️</div>
+              <h3 className="text-xl font-semibold mb-2 text-foreground">Seasonal Guide</h3>
+              <p className="text-muted-foreground">Discover the best foods for every season</p>
+            </div>
+            
             <div className="bg-card p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 border border-border cursor-pointer" onClick={() => navigate("/bmi")}>
               <div className="text-4xl mb-4">📊</div>
               <h3 className="text-xl font-semibold mb-2 text-foreground">BMI Calculator</h3>

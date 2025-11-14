@@ -37,7 +37,7 @@ export default function Seasonal() {
 
       if (error) throw error;
 
-      setRecommendations(data || []);
+      setRecommendations((data as SeasonalRecommendation[]) || []);
     } catch (error: any) {
       toast({
         title: 'Error Loading Recommendations',
